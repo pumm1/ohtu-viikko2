@@ -1,6 +1,6 @@
 
 package ohtu.verkkokauppa;
 
-public interface IO <A> {
+public interface IO<E> {
     
 }

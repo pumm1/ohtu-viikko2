@@ -2,14 +2,16 @@ package ohtu.verkkokauppa;
 
 public class Kauppa {
 
-    private IO varasto;
+//    private Varasto varasto;
 //    private Pankki pankki;
     private Ostoskori ostoskori;
-    private IO viitegeneraattori;
+//    private Viitegeneraattori viitegeneraattori;
+    private VarastoIO varasto;
+    private PankkiIO pankki;
+    private ViitegeneraattoriIO viitegeneraattori;
     private String kaupanTili;
-    private IO pankki;
 
-    public Kauppa( Varasto v, Pankki p, Viitegeneraattori vg) {
+    public Kauppa(VarastoIO v, PankkiIO p, ViitegeneraattoriIO vg) {
         varasto = v;
         pankki = p;
         viitegeneraattori = vg;
@@ -23,7 +25,6 @@ public class Kauppa {
     public void poistaKorista(int id) {
         Tuote t = varasto.haeTuote(id);
         varasto.palautaVarastoon(t);
-        
     }
 
     public void lisaaKoriin(int id) {

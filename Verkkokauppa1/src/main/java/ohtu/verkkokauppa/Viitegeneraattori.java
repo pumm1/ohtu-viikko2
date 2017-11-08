@@ -1,6 +1,6 @@
 package ohtu.verkkokauppa;
 
-public class Viitegeneraattori implements IO<Viitegeneraattori> {
+public class Viitegeneraattori implements ViitegeneraattoriIO {
 
     private static Viitegeneraattori instanssi;
 
@@ -11,14 +11,15 @@ public class Viitegeneraattori implements IO<Viitegeneraattori> {
 
         return instanssi;
     }
-
+    
     private int seuraava;
-
-    private Viitegeneraattori() {
-        seuraava = 1;
+    
+    private Viitegeneraattori(){
+        seuraava = 1;    
     }
-
-    public int uusi() {
+    
+    @Override
+    public int uusi(){
         return seuraava++;
     }
 }
