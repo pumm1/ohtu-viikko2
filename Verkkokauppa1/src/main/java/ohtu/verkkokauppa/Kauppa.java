@@ -11,14 +11,15 @@ public class Kauppa {
     private ViitegeneraattoriIO viitegeneraattori;
     private String kaupanTili;
 
-    public Kauppa(VarastoIO v, PankkiIO p, ViitegeneraattoriIO vg) {
-        varasto = v;
-        pankki = p;
-        viitegeneraattori = vg;
+    public Kauppa(IO v, IO p, IO vg) {
+        varasto = (VarastoIO) v;
+        pankki = (PankkiIO) p;
+        viitegeneraattori = (ViitegeneraattoriIO) vg;
         kaupanTili = "33333-44455";
     }
 
     public void aloitaAsiointi() {
+        System.out.println("asioidaan");
         ostoskori = new Ostoskori();
     }
 
@@ -38,7 +39,7 @@ public class Kauppa {
     public boolean tilimaksu(String nimi, String tiliNumero) {
         int viite = viitegeneraattori.uusi();
         int summa = ostoskori.hinta();
-
+        System.out.println("summa: " + summa);
         return pankki.tilisiirto(nimi, viite, tiliNumero, kaupanTili, summa);
     }
 

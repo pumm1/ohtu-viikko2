@@ -9,7 +9,7 @@ package ohtu.verkkokauppa;
  *
  * @author sagu
  */
-public interface PankkiIO {
+public interface PankkiIO extends IO{
 
     boolean tilisiirto(String nimi, int viitenumero, String tililta, String tilille, int summa);
     

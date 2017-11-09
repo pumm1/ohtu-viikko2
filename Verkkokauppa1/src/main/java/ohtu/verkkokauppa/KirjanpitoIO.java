@@ -7,7 +7,7 @@ package ohtu.verkkokauppa;
 
 import java.util.ArrayList;
 
-public interface KirjanpitoIO {
+public interface KirjanpitoIO extends IO {
 
     ArrayList<String> getTapahtumat();
 

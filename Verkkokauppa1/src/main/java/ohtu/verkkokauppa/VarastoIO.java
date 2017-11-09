@@ -9,8 +9,8 @@ package ohtu.verkkokauppa;
  *
  * @author sagu
  */
-public interface VarastoIO {
-
+public interface VarastoIO extends IO {
+    
     Tuote haeTuote(int id);
 
     void otaVarastosta(Tuote t);
