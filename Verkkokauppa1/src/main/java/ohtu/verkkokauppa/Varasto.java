@@ -1,5 +1,6 @@
 package ohtu.verkkokauppa;
-
+import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Autowired;
 import java.util.*;
 
 public class Varasto implements VarastoIO {

@@ -14,8 +14,10 @@ public class Main {
 //        Kauppa kauppa = new Kauppa(Varasto.getInstance(), Pankki.getInstance(), Viitegeneraattori.getInstance() );
         ApplicationContext ctx = new FileSystemXmlApplicationContext("src/main/resources/spring-context.xml");  
         
-        Kauppa kauppa = ctx.getBean(Kauppa.class);
-        Kirjanpito kirjanpito = ctx.getBean(Kirjanpito.class);
+          Kauppa kauppa = (Kauppa) ctx.getBean("kauppa");
+          Kirjanpito kirjanpito = (Kirjanpito) ctx.getBean("kirja");
+//        Kauppa kauppa = ctx.getBean(Kauppa.class);
+//        Kirjanpito kirjanpito = ctx.getBean(Kirjanpito.class);
 //        Kirjanpito kirjanpito = new Kirjanpito();
 //        Varasto varasto = new Varasto(kirjanpito);
 //        Pankki pankki = new Pankki(kirjanpito);

@@ -1,5 +1,6 @@
 package ohtu.verkkokauppa;
-
+import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Autowired;
 public class Pankki implements PankkiIO {
 
     private KirjanpitoIO kirjanpito;
